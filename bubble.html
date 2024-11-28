@@ -27,6 +27,7 @@
         document.getElementById('item-2').addEventListener("click",function(e){
             console.log('item-2 clicked');
             e.stopImmediatePropagation()
+            e.stopPropagation()
         })
         document.getElementById('item-2').addEventListener("click",function(){
             console.log('item-2 second clicked');
