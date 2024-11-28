@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Final Summary</title>
+</head>
+<body>
+    <h1>This is Final Dom Summary</h1>
+    <p id="para-text">Default Input Text</p>
+    <input id="text-id" type="text">
+    <button id="update">update</button>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle Button by Events Handler</button>
+    <button id="change-handler">click to change</button>
+    <script>
+        document.getElementById("update").addEventListener('click',function(){
+        const textId=document.getElementById('text-id')
+       const fieldValue=textId.value
+         const paraText=document.getElementById('para-text')
+         paraText.innerText=fieldValue
+         textId.value =' '
+        })
+    </script>
+    <script>
+        function handleOnClick() {
+            const handlerStatus=document.getElementById('handler-status')
+            handlerStatus.innerText='i am clicked by handleOnClicl'
+        }
+    </script>
+    <script>
+        document.getElementById("change-handler").addEventListener('click', 
+            function(){
+                const handlerStatus=document.getElementById("handler-status")
+                handlerStatus.innerText='i am luckey to change'
+            }
+        )
+    </script>
+</body>
+</html>
